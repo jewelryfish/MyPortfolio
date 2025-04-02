@@ -1,0 +1,20 @@
+[
+    {
+        "title": "自動販売機",
+        "description": "Laravelの学習完了タイミングで作成した自動販売機のシミュレーションアプリです。Laravelの基本的な機能を使用して、ユーザーが飲み物を選択し、購入できるようにしました。",
+        "github": "https://github.com/yourusername/vending_machine",
+        "release":1
+    },
+    {
+        "title": "HRBrain ID取得",
+        "description": "ユーザーのメールアドレスを入力することで、HRBrainのIDを取得するアプリです。",
+        "github": "https://github.com/yourusername/HRBrain_getID",
+        "release":1
+    },
+    {
+        "title": "COCOFORIA 拡張システム",
+        "description": "COCOFORIAでゲームをする際に便利なコードを作成中",
+        "github": "https://github.com/yourusername/CoCLOG",
+        "release":0
+    }
+]
