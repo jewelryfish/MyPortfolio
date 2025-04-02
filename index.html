@@ -10,14 +10,21 @@
     <div class="container">
         <h1 class="text-center mt-5">私のポートフォリオ</h1>
         <p class="text-center">これまでに作ったプロジェクト一覧です。</p>
-        <div id="projects" class="row"></div>
+
+        <!-- GitHub Projects セクション -->
+        <div class="section-title">GitHub Projects</div>
+        <div id="github-projects" class="row"></div>
+
+        <!-- GAS Projects セクション -->
+        <div class="section-title">GAS Projects</div>
+        <div class="text-center text-muted">準備中</div>
     </div>
 
     <script>
         fetch("projects.json")
             .then(response => response.json())
             .then(data => {
-                let projectsContainer = document.getElementById("projects");
+                let githubProjectsContainer = document.getElementById("github-projects");
                 data.forEach(project => {
                     let projectCard = `
                         <div class="col-md-4">
@@ -25,11 +32,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">${project.title}</h5>
                                     <p class="card-text">${project.description}</p>
-                                    ${project.release==1 ? `<a href="${project.github}" class="btn btn-dark" target="_blank">GitHub</a>` : '<a><span class="text-muted">作成中</span></a>'}
+                                    ${project.release == 1 
+                                        ? `<a href="${project.github}" class="btn btn-custom btn-sm" target="_blank">GitHub</a>` 
+                                        : '<span class="text-muted">作成中</span>'}
                                 </div>
                             </div>
                         </div>`;
-                    projectsContainer.innerHTML += projectCard;
+                    githubProjectsContainer.innerHTML += projectCard;
                 });
             });
     </script>
